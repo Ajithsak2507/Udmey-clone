@@ -4,199 +4,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Udemy</title>
-    <!-- Google Style sheet for fonts     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
-    <!-- My Style sheet -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Greenden</title>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="navbar__s1">
-            <h1 class="navbar__s1__title">Udemy</h1>
+    <!-- Responsive navbar -->
+    <nav class="bg-green-200 p-5 flex items-center justify-between shadow-xl sticky top-0 z-10">
+        <h1 class="text-2xl font-bold">Greenden</h1>
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <ul class="flex gap-10 text-gray-500 hidden md:flex">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./products.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Side navbar -->
+    <nav id="sidenav" class="bg-green-200 fixed z-20 top-0 transition-all duration-1000 " style="width: 50%; height: 100vh; right: -50%; ">
+        <div class="text-right p-10" >
+            <p id="close-sidenavbar" class="inline cursor-pointer">X</p>
         </div>
-        <div class="navbar__s2">
-            <i class="fa-solid fa-magnifying-glass" style="color: #070808;"></i>
-            <input placeholder="Search for anything here. Tech, Business, Art...">
+        <ul class="flex flex-col gap-10 text-gray-500 items-center  ">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./products.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <header class="bg-green-200 flex justify-center p-5">
+        <div class="p-5">
+            <p class="pb-5">We offer you a wide range of artifcial and natural flowers</p>
+            <h1 class="pb-5 font-bold text-3xl">Plants for your interior</h1>
+            <div>
+                <button class="bg-black border border-black text-white p-2 rounded">Shop Now</button>
+                <button class="border border-black rounded p-2 b">Watch Video</button>
+            </div>
+            <p class="pt-5">160+ Plants Species | 100+ Clients</p>
         </div>
-        <div class="navbar__s3">
-            <p>Course</p>
-            <div class="mylearning">
-            <p>My Learning</p>
-            <div class="mylearning__popup">
-                <p>You did not purchaesd anything</p>
+        <div>
+            <img src="./images/header plant.jpg" alt="plant" class="pt-10 hidden md:block">
+        </div>
+    </header>
+    <!-- About -->
+    <section class="text-center">
+        <h1 class="font-bold text-3xl my-4">About Us</h1>
+        <p>This site for those who admire the beauty and harmony of nature</p>
+        <div class="md:flex">
+            <div class="border border-black text-center m-10 p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-10 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
 
+                <h2 class="text-xl font-medium">Large Assortment</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nemo corrupti sed molestias ipsam
+                    eaque incidunt deleniti voluptatem rerum exercitationem similique quis quos aspernatur minus
+                    suscipit molestiae, voluptatibus voluptate expedita.</p>
             </div>
+            <div class="border border-black text-center m-10 p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-10 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+                </svg>
+
+                <h2 class="text-xl font-medium">Free and Fast Shipping</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nemo corrupti sed molestias ipsam
+                    eaque incidunt deleniti voluptatem rerum exercitationem similique quis quos aspernatur minus
+                    suscipit molestiae, voluptatibus voluptate expedita.</p>
             </div>
-            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
-            <i class="fa-solid fa-bell" style="color: #000000;"></i>
-            <i class="fa-solid fa-user" style="color: #000000;"></i>
+            <div class="border border-black text-center m-10 p-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-10 inline">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                </svg>
+
+                <h2 class="text-xl font-medium">24/7 Support</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nemo corrupti sed molestias ipsam
+                    eaque incidunt deleniti voluptatem rerum exercitationem similique quis quos aspernatur minus
+                    suscipit molestiae, voluptatibus voluptate expedita.</p>
+            </div>
+
         </div>
-        <div class="navbar__s4">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </div>
-    <!-- Categories -->
-    <div class="categories">
-        <p>Development</p>
-        <p>Business</p>
-        <p>IT & Software</p>
-        <p>Personal Development</p>
-        <p>Design</p>
-        <p>Marketing</p>
-    </div>
-    <!-- Sale Image -->
-    <div class="sale-image">
-        <img src="./images/sale-image.jpg" alt=" ">
-        <div class="sale-image__offer">
-            <h2>Udmey Falsh Sale! 24 hours to save.</h2>
-            <p>Get the top course for just 499. Just one day to save but a lifetime to Learning</p>
-        </div>
-    </div>
-    <!-- Recommended -->
-    <div class="recommended">
-        <h1 class="recommended__title">Recommended for you</h1>
-        <p>pick the best fit</p>
-        <div class="recommended__container">
-            <div class="course-card">
-                <img src="./images/c1.jpg" alt=" ">
-                <h3>2025 Python Data visualisathion Master class</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
+    </section>
+    <!-- Best Seller -->
+    <section class="text-center p-5">
+        <h1 class="font-bold text-3xl">Best seller</h1>
+        <div class="grid grid-cols-2 mt-7 gap-5 md:grid-cols-4">
+            <div>
+                <img src="./images/bestseller-1.png" alt=""
+                    class="inline hover:shadow-xl mb-2 transform hover:-translate-y-2">
+                <h1>Rose plant</h1>
+                <p>$100</p>
             </div>
-            <div class="course-card">
-                <img src="./images/c2.jpg" alt=" ">
-                <h3>2025 Web Development Master class</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
+            <div>
+                <img src="./images/bestseller-2.png" alt=""
+                    class="inline hover:shadow-xl mb-2 transform hover:-translate-y-2">
+                <h1>Succlent plant</h1>
+                <p>$200</p>
             </div>
-            <div class="course-card">
-                <img src="./images/c3.jpg" alt=" ">
-                <h3>2025 Master UI/UX Design</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
+            <div>
+                <img src="./images/bestseller-3.png" alt=""
+                    class="inline hover:shadow-xl mb-2 transform hover:-translate-y-2">
+                <h1>Snake plant</h1>
+                <p>$300</p>
             </div>
-            <div class="course-card">
-                <img src="./images/c4.jpg" alt=" ">
-                <h3>AI</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-        </div>
-    </div>
-    <!-- Topic -->
-    <div class="topic">
-        <h1 class="topic-title">Topic Recommended for you</h1>
-        <div class="topic-title__Container">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Javascript</p>
-            <p>React JS</p>
-            <p>AWS</p>
-            <p>Networking</p>
-            <p>Web Development</p>
-            <p>.Net</p>
-            <p>SQL</p>
-        </div>
-    </div>
-    <!-- Popular Section -->
-    <div class="popular">
-        <h1 class="popular__title">Most Popular</h1>
-        <p class="popular__subtitle">Pick the best fit</p>
-        <div class="popular__container">
-            <div class="course-card">
-                <img src="./images/c1.jpg" alt=" ">
-                <h3>2025 Python Data visualisathion Master class</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c2.jpg" alt=" ">
-                <h3>2025 Web Development Master class</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c3.jpg" alt=" ">
-                <h3>2025 Master UI/UX Design</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c4.jpg" alt=" ">
-                <h3>AI</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c1.jpg" alt=" ">
-                <h3>2025 Python Data visualisathion Master class</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c2.jpg" alt=" ">
-                <h3>2025 Web Development Master class</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c3.jpg" alt=" ">
-                <h3>2025 Master UI/UX Design</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
-            </div>
-            <div class="course-card">
-                <img src="./images/c4.jpg" alt=" ">
-                <h3>AI</h3>
-                <p>Col steele</p>
-                <p>4.9⭐⭐⭐⭐</p>
-                <p>$499 <del> $1999</del></p>
+            <div>
+                <img src="./images/bestseller-4.png" alt=""
+                    class="inline hover:shadow-xl mb-2 transform hover:-translate-y-2">
+                <h1>Money plant</h1>
+                <p>$400</p>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Customer Reviews -->
+    <section class="p-10">
+        <h1 class="text-center font-bold text-3xl">Customer Reviews</h1>
+        <div>
+            <div class="pt-10 bg-green-700 p-10 mt-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid blanditiis suscipit
+                    asperiores et exercitationem quaerat mollitia ad earum magni non dicta, atque quia animi, fugit
+                    nulla, corrupti labore nam? Numquam quo voluptas nihil quidem harum, </p>
+                <h1 class="font-bold text-yellow-400">Ajith S</h1>
+            </div>
+            <div class="pt-10 bg-green-700 p-10 mt-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <h1 class="font-bold text-yellow-400">Lavanya N</h1>
+            </div>
+            <div class="pt-10 bg-green-700 p-10 mt-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid blanditiis suscipit
+                    asperiores et exercitationem quaerat </p>
+                <h1 class="font-bold text-yellow-400">Usha S</h1>
+            </div>
+        </div>
+    </section>
+    <!-- News Letter -->
+    <section class="text-center mt-5">
+        <h1 class="font-bold text-3xl mt-5">Join Our News Letter</h1>
+        <p>Singup for email newspaper to get exclusive discounts, updates and more.</p>
+        <input type="text" class="border border-black mt-3 p-2" style="width: 80%;"><br>
+        <button class="bg-black text-white underline m-3 p-3">Subscribe</button>
+    </section>
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer__one">
-            <div class="footer__one__s1">
-                <p>Udmey Business</p>
-                <p>Teach on Udmey</p>
-                <p>Get the App</p>
-                <p>About Us</p>
-                <p>Contact Us</p>
-            </div>
-            <div class="footer__one__s2">
-                <p>Careers</p>
-                <p>Blog</p>
-                <p>Help and Support</p>
-                <p>Affiliate</p>
-                <p>Investors</p>
-            </div>
-        </div>
-        <div class="footer__two">
-            <h1>Udmey</h1>
-            <p>&copy; Udmey, Inc</p>
-        </div>
-    </div>
+    <section class="bg-green-200 p-10 flex flex-col gap-5">
+        <h1 class="font-bold text-4xl">GREENDEN</h1>
+        <p>The standard chunk is used since the 1500s is reprodused below for those interest</p>
+        <p>@ 2021 Greenden.com</p>
+
+    </section>
+
+<script src="index.js"></script>
+
 </body>
 
 </html>
